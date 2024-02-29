@@ -1,0 +1,95 @@
+<!-- activity_main.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView with background color, padding, and text styling -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Favorite Twitter Searches"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:background="#3498db"
+        android:textColor="#ffffff"/>
+
+    <!-- SearchView with background color and top margin -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ecf0f1"
+        android:queryHint="Search tags..." />
+
+    <!-- Add Tag Button with background color and margin -->
+      <androidx.appcompat.widget.AppCompatButton
+
+    android:id="@+id/btnAddTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#3498db"
+        android:text="Add Tag"
+        android:textColor="#ffffff" />
+
+    <!-- Tagged Searches Container with background color -->
+    <LinearLayout
+        android:id="@+id/taggedSearchesContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddTag"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="#749C75"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Tagged Searches TextView -->
+        <TextView
+            android:id="@+id/tvTaggedSearches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tagged Searches"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- ScrollView for tags -->
+        <ScrollView
+            android:id="@+id/taggedSearchesScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tagsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- Clear All Tags Button fixed at the bottom with background color -->
+    <androidx.appcompat.widget.AppCompatButton
+    android:id="@+id/btnClearTags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear All Tags"
+        android:layout_alignParentBottom="true"
+        android:background="#e74c3c"
+        android:textColor="#ffffff"/>
+</RelativeLayout>

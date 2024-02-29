@@ -1,0 +1,42 @@
+<!-- activity_add_tag.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtTagName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter tag name"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtTagName"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/btnSaveTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:layout_marginEnd="8dp"
+            android:background="#3498db"
+            android:textColor="#ffffff"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+
+            android:id="@+id/btnCancelAddTag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:background="#e74c3c"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<!-- activity_edit_tag_dialog.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edtModifiedTagName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter modified tag name"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtModifiedTagName"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSaveChanges"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save Changes"
+            android:layout_marginEnd="8dp"
+            android:background="#3498db"
+            android:textColor="#ffffff"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:background="#e74c3c"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+</RelativeLayout>
